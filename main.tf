@@ -1,10 +1,10 @@
 terraform {
-  required_version = "~> 1.0"
+  required_version = ">= 1.0"
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0"
+      version = ">= 4.0"
     }
   }
 
@@ -17,7 +17,7 @@ provider "aws" {
 
 module "s3_bucket" {
   source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "~> 3.3"
+  version = ">= 3.3"
 
   bucket = "renovate-155880"
   acl    = "private"
